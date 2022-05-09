@@ -1,0 +1,64 @@
+.content {
+
+}
+
+.content__body {
+
+}
+
+.block {
+
+}
+
+.block__item {
+   margin: 0px 0px 20px 0px;
+}
+
+.block__title {
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 18px;
+   position: relative;
+   padding: 0px 0px 0px 30px;
+   cursor: pointer;
+   
+   &::before,
+   &::after{
+      width: 10px;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      top: 8px;
+      transition: all 0.5s ease 0s;
+   }
+
+   &::before{
+      content:'';
+      transform: rotate(40deg);
+      left: 0; 
+   }
+
+   &::after{
+      content:'';
+      transform: rotate(-40deg);
+      left: 7px; 
+   }
+}
+
+.block__title.active::before,
+.block__title.active::after{
+   background-color: red;
+}
+
+.block__title.active::before{
+   transform: rotate(-40deg);
+}
+
+.block__title.active::after{
+   transform: rotate(40deg);   
+}
+
+.block__text {
+   display: none;
+   padding: 10px 0px 0px 0px;
+}

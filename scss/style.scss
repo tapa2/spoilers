@@ -1,0 +1,58 @@
+/*
+* variables ↓
+*/
+
+$conteinerWidth: 1180px;
+
+//=====================================================
+
+$pc: $conteinerWidth;
+$tablet: 992px; // Tablets, some smartphones in landscape position
+$mobile: 767px; //Smartphones L
+$mobileSmall: 480px; // Smartphones S
+
+
+/*
+* import of .scss styles ↓
+*/
+
+@import "zeroing.scss";
+@import "_header";
+@import "_content";
+@import "_footer";
+
+
+/*
+* import of fonts ↓
+*/
+
+
+
+/*
+* styles ↓
+*/
+
+body{
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden; 
+}
+
+.page{
+   flex: 1 1 auto;
+}
+
+.conteiner{
+   width: 100%;
+   max-width: $conteinerWidth;
+   min-width: 320px;
+   padding: 0 15px;
+   margin: 0 auto;
+
+}
